@@ -1,4 +1,4 @@
-package de.openjobs.step;
+package de.openjobs;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -13,6 +13,7 @@ import org.jbehave.core.steps.InstanceStepsFactory;
 import org.junit.runner.RunWith;
 
 import de.codecentric.jbehave.junit.monitoring.JUnitReportingRunner;
+import de.openjobs.step.StackSteps;
 
 @RunWith(JUnitReportingRunner.class)
 public class MyRunner extends JUnitStories {
