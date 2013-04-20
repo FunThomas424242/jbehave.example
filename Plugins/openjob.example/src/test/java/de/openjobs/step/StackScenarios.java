@@ -1,4 +1,4 @@
-package de.openjobs.scenarios;
+package de.openjobs.step;
 
 
 
@@ -15,8 +15,11 @@ import org.jbehave.core.reporters.StoryReporterBuilder.Format;
 import org.jbehave.core.steps.CandidateSteps;
 import org.jbehave.core.steps.InstanceStepsFactory;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
+import de.codecentric.jbehave.junit.monitoring.JUnitReportingRunner;
 
+@RunWith(JUnitReportingRunner.class)
 public class StackScenarios extends JUnitStory {
 
 	@Override

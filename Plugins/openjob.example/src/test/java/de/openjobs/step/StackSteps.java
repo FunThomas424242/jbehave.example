@@ -1,4 +1,4 @@
-package de.openjobs.scenarios;
+package de.openjobs.step;
 
 
 import java.util.Stack;
