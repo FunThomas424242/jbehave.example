@@ -1,4 +1,4 @@
-package de.openjobs.entities;
+package de.openjobs.scenarios;
 
 
 import java.util.Stack;
