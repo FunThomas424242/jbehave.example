@@ -36,6 +36,13 @@
 	</dependencies>
 
 	<build>
+
+		<resources>
+			<resource>
+				<directory>src/test/resources</directory>
+			</resource>
+		</resources>
+
 		<plugins>
 			<plugin>
 				<groupId>org.jbehave</groupId>

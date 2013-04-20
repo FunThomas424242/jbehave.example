@@ -16,11 +16,11 @@ import de.codecentric.jbehave.junit.monitoring.JUnitReportingRunner;
 import de.openjobs.step.StackSteps;
 
 @RunWith(JUnitReportingRunner.class)
-public class MyRunner extends JUnitStories {
+public class MyScenarios extends JUnitStories {
 
-	public MyRunner() {
+	public MyScenarios() {
 		configuredEmbedder().embedderControls().useThreads(1);
-		JUnitReportingRunner.recommandedControls(configuredEmbedder());
+		//JUnitReportingRunner.recommandedControls(configuredEmbedder());
 
 	}
 
@@ -48,7 +48,7 @@ public class MyRunner extends JUnitStories {
 			e.printStackTrace();
 		}
 		
-		List<String> stories= new StoryFinder().findPaths(storyURL, "**/*.story", "**/excluded*.story");
+		List<String> stories= new StoryFinder().findPaths(storyURL, "**/*.story", "");
 		return stories;
 	}
 
