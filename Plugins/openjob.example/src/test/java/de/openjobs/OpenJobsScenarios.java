@@ -17,9 +17,9 @@ import de.openjobs.step.BewerbenSteps;
 import de.openjobs.step.StackSteps;
 
 @RunWith(JUnitReportingRunner.class)
-public class MyScenarios extends JUnitStories {
+public class OpenJobsScenarios extends JUnitStories {
 
-	public MyScenarios() {
+	public OpenJobsScenarios() {
 		configuredEmbedder().embedderControls().useThreads(1);
 		JUnitReportingRunner.recommandedControls(configuredEmbedder());
 
