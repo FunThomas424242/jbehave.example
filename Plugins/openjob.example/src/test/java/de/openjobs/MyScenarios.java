@@ -13,6 +13,7 @@ import org.jbehave.core.steps.InstanceStepsFactory;
 import org.junit.runner.RunWith;
 
 import de.codecentric.jbehave.junit.monitoring.JUnitReportingRunner;
+import de.openjobs.step.BewerbenSteps;
 import de.openjobs.step.StackSteps;
 
 @RunWith(JUnitReportingRunner.class)
@@ -20,13 +21,13 @@ public class MyScenarios extends JUnitStories {
 
 	public MyScenarios() {
 		configuredEmbedder().embedderControls().useThreads(1);
-		//JUnitReportingRunner.recommandedControls(configuredEmbedder());
+		JUnitReportingRunner.recommandedControls(configuredEmbedder());
 
 	}
 
 	@Override
 	public InjectableStepsFactory stepsFactory() {
-		return new InstanceStepsFactory(configuration(), new StackSteps());
+		return new InstanceStepsFactory(configuration(), new BewerbenSteps(), new StackSteps());
 	}
 
 	@Override
