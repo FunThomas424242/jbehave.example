@@ -12,8 +12,8 @@ import de.openjobs.entities.Stellenangebot;
 
 public class BewerbenSteps {
 
-	private final static Arbeitgeber ARBEITGEBER = new Arbeitgeber();
-	private final static Stellenangebot STELLENANGEBOT = ARBEITGEBER.erstelleStellenangebot();
+	private  Arbeitgeber arbeitgeber ;
+	private Stellenangebot stellenangebot;
 	
 	
 	public BewerbenSteps() {
@@ -23,7 +23,7 @@ public class BewerbenSteps {
 	@AsParameterConverter
 	public Arbeitgeber erstelleArbeitgeber(String tokenName) {
 		if ("Arbeitgeber".equals(tokenName)) {
-			return ARBEITGEBER;
+			return arbeitgeber;
 		} else {
 			Assert.fail();
 		}
@@ -32,7 +32,9 @@ public class BewerbenSteps {
 
 	@Given("ein Arbeitgeber")
 	public Arbeitgeber registriereArbeitgeber() {
-		return ARBEITGEBER;
+		// Fehleranfälliger Punkt hier wäre NatSpec besser !!!
+		arbeitgeber=new Arbeitgeber();
+		return arbeitgeber;
 	}
 
 	@When("dieser $Arbeitgeber registriert wurde")
@@ -43,7 +45,7 @@ public class BewerbenSteps {
 	@AsParameterConverter
 	public Stellenangebot erstelleStellenangebot(String tokenName) {
 		if ("Stellenangebot".equals(tokenName)) {
-			return STELLENANGEBOT;
+			return stellenangebot;
 		} else {
 			Assert.fail();
 		}
@@ -52,7 +54,8 @@ public class BewerbenSteps {
 	
 	@When("ein Stellenangebot erstellt hat")
 	public Stellenangebot erstelleStellenangebot() {
-		return STELLENANGEBOT;
+		stellenangebot=arbeitgeber.erstelleStellenangebot();
+		return stellenangebot;
 	}
 
 	@When("ein valides $Stellenangebot vorliegt")
@@ -94,12 +97,6 @@ public class BewerbenSteps {
 	// }
 	//
 	//
-	// /**
-	// *
-	// * @param arbeitssuchender
-	// * @param stellenangebot
-	// * @return Bewerbung
-	// */
 	// @TextSyntax("Der registrierte #1 erstellt zum #2 eine Bewerbung.")
 	// public Bewerbung bewirbtSichAufStellenangebot(Arbeitssuchender
 	// arbeitssuchender, Stellenangebot stellenangebot) {
