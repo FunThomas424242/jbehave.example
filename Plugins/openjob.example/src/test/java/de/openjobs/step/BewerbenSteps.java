@@ -12,6 +12,10 @@ import de.openjobs.entities.Stellenangebot;
 
 public class BewerbenSteps {
 
+	private final static Arbeitgeber ARBEITGEBER = new Arbeitgeber();
+	private final static Stellenangebot STELLENANGEBOT = ARBEITGEBER.erstelleStellenangebot();
+	
+	
 	public BewerbenSteps() {
 		super();
 	}
@@ -19,7 +23,7 @@ public class BewerbenSteps {
 	@AsParameterConverter
 	public Arbeitgeber erstelleArbeitgeber(String tokenName) {
 		if ("Arbeitgeber".equals(tokenName)) {
-			return new Arbeitgeber();
+			return ARBEITGEBER;
 		} else {
 			Assert.fail();
 		}
@@ -28,7 +32,7 @@ public class BewerbenSteps {
 
 	@Given("ein Arbeitgeber")
 	public Arbeitgeber registriereArbeitgeber() {
-		return new Arbeitgeber();
+		return ARBEITGEBER;
 	}
 
 	@When("dieser $Arbeitgeber registriert wurde")
@@ -39,7 +43,7 @@ public class BewerbenSteps {
 	@AsParameterConverter
 	public Stellenangebot erstelleStellenangebot(String tokenName) {
 		if ("Stellenangebot".equals(tokenName)) {
-			return new Stellenangebot();
+			return STELLENANGEBOT;
 		} else {
 			Assert.fail();
 		}
@@ -48,8 +52,7 @@ public class BewerbenSteps {
 	
 	@When("ein Stellenangebot erstellt hat")
 	public Stellenangebot erstelleStellenangebot() {
-		final Arbeitgeber arbeitgeber = new Arbeitgeber();
-		return arbeitgeber.erstelleStellenangebot();
+		return STELLENANGEBOT;
 	}
 
 	@When("ein valides $Stellenangebot vorliegt")
