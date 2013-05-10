@@ -56,7 +56,7 @@
 							<includes>
 								<include>**/*Scenarios.java</include>
 							</includes>
-							<ignoreFailureInStories>true</ignoreFailureInStories>
+							<ignoreFailureInStories>false</ignoreFailureInStories>
 							<ignoreFailureInView>false</ignoreFailureInView>
 						</configuration>
 						<goals>
