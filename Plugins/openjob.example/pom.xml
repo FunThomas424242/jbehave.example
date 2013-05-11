@@ -36,7 +36,11 @@
 	</dependencies>
 
 	<build>
-
+		<testResources>
+			<testResource>
+				<directory>src/test/resources/stories</directory>
+			</testResource>
+		</testResources>
 		<resources>
 			<resource>
 				<directory>src/test/resources</directory>
@@ -48,6 +52,9 @@
 				<groupId>org.jbehave</groupId>
 				<artifactId>jbehave-maven-plugin</artifactId>
 				<version>${jbehave.version}</version>
+				<goals>
+					<goal>run-stories-as-embeddables</goal>
+				</goals>
 				<executions>
 					<execution>
 						<id>run-stories-as-embeddables</id>
@@ -59,59 +66,31 @@
 							<ignoreFailureInStories>false</ignoreFailureInStories>
 							<ignoreFailureInView>false</ignoreFailureInView>
 						</configuration>
-						<goals>
-							<goal>run-stories-as-embeddables</goal>
-						</goals>
 					</execution>
 				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+						<version>1.2.16</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>unpack-jbehave-site-resources</id>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>unpack</goal>
-						</goals>
-						<configuration>
-							<overwriteReleases>false</overwriteReleases>
-							<overwriteSnapshots>true</overwriteSnapshots>
-							<artifactItems>
-								<artifactItem>
-									<groupId>org.jbehave.site</groupId>
-									<artifactId>jbehave-site-resources</artifactId>
-									<version>3.1.1</version>
-									<type>zip</type>
-									<outputDirectory> ${project.build.directory}/jbehave/view</outputDirectory>
-								</artifactItem>
-							</artifactItems>
-						</configuration>
-					</execution>
-					<execution>
-						<id>unpack-jbehave-reports-resources</id>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>unpack</goal>
-						</goals>
-						<configuration>
-							<overwriteReleases>false</overwriteReleases>
-							<overwriteSnapshots>true</overwriteSnapshots>
-							<artifactItems>
-								<artifactItem>
-									<groupId>org.jbehave</groupId>
-									<artifactId>jbehave-core</artifactId>
-									<version>${jbehave.version}</version>
-									<outputDirectory>${project.build.directory}/jbehave/view</outputDirectory>
-									<includes>**\/*.css,**\/*.ftl,**\/*.js</includes>
-								</artifactItem>
-							</artifactItems>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+			<!-- plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-dependency-plugin</artifactId> 
+				<executions> <execution> <id>unpack-jbehave-site-resources</id> <phase>generate-resources</phase> 
+				<goals> <goal>unpack</goal> </goals> <configuration> <overwriteReleases>false</overwriteReleases> 
+				<overwriteSnapshots>true</overwriteSnapshots> <artifactItems> <artifactItem> 
+				<groupId>org.jbehave.site</groupId> <artifactId>jbehave-site-resources</artifactId> 
+				<version>3.1.1</version> <type>zip</type> <outputDirectory> ${project.build.directory}/jbehave/view</outputDirectory> 
+				</artifactItem> </artifactItems> </configuration> </execution> <execution> 
+				<id>unpack-jbehave-reports-resources</id> <phase>generate-resources</phase> 
+				<goals> <goal>unpack</goal> </goals> <configuration> <overwriteReleases>false</overwriteReleases> 
+				<overwriteSnapshots>true</overwriteSnapshots> <artifactItems> <artifactItem> 
+				<groupId>org.jbehave</groupId> <artifactId>jbehave-core</artifactId> <version>${jbehave.version}</version> 
+				<outputDirectory>${project.build.directory}/jbehave/view</outputDirectory> 
+				<includes>**\/*.css,**\/*.ftl,**\/*.js</includes> </artifactItem> </artifactItems> 
+				</configuration> </execution> </executions> </plugin -->
 		</plugins>
 	</build>
 </project>
