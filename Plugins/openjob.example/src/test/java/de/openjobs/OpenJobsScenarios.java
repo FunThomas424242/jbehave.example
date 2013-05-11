@@ -34,6 +34,7 @@ import com.thoughtworks.paranamer.NullParanamer;
 
 import de.codecentric.jbehave.junit.monitoring.JUnitReportingRunner;
 import de.openjobs.step.BewerbenSteps;
+import de.openjobs.step.StackSteps;
 
 @RunWith(JUnitReportingRunner.class)
 public class OpenJobsScenarios extends JUnitStories {
@@ -89,7 +90,7 @@ public class OpenJobsScenarios extends JUnitStories {
 
 	@Override
 	public InjectableStepsFactory stepsFactory() {
-		return new InstanceStepsFactory(configuration(), new BewerbenSteps());
+		return new InstanceStepsFactory(configuration(), new BewerbenSteps(), new StackSteps());
 	}
 
 	@Override
@@ -109,7 +110,7 @@ public class OpenJobsScenarios extends JUnitStories {
 			e.printStackTrace();
 		}
 
-		System.out.println("StoryURL:" + storyURL.toString());
+		//System.out.println("StoryURL:" + storyURL.toString());
 		List<String> stories = new StoryFinder().findPaths(storyURL,
 				"**/*.story", "");
 		return stories;
