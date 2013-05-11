@@ -11,12 +11,12 @@ import org.jbehave.core.annotations.When;
 import de.openjobs.entities.Arbeitgeber;
 import de.openjobs.entities.Stellenangebot;
 
-public class BewerbenSteps {
+public class VermittlungsSteps {
 
 	private Arbeitgeber arbeitgeber;
 	private Stellenangebot stellenangebot;
 
-	public BewerbenSteps() {
+	public VermittlungsSteps() {
 		super();
 	}
 

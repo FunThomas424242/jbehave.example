@@ -33,7 +33,7 @@ import org.junit.runner.RunWith;
 import com.thoughtworks.paranamer.NullParanamer;
 
 import de.codecentric.jbehave.junit.monitoring.JUnitReportingRunner;
-import de.openjobs.steps.BewerbenSteps;
+import de.openjobs.steps.VermittlungsSteps;
 import de.openjobs.steps.StackSteps;
 
 @RunWith(JUnitReportingRunner.class)
@@ -90,7 +90,7 @@ public class RunScenarios extends JUnitStories {
 
 	@Override
 	public InjectableStepsFactory stepsFactory() {
-		return new InstanceStepsFactory(configuration(), new BewerbenSteps(), new StackSteps());
+		return new InstanceStepsFactory(configuration(), new VermittlungsSteps(), new StackSteps());
 	}
 
 	@Override
