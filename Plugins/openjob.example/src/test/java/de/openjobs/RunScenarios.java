@@ -33,15 +33,15 @@ import org.junit.runner.RunWith;
 import com.thoughtworks.paranamer.NullParanamer;
 
 import de.codecentric.jbehave.junit.monitoring.JUnitReportingRunner;
-import de.openjobs.step.BewerbenSteps;
-import de.openjobs.step.StackSteps;
+import de.openjobs.steps.BewerbenSteps;
+import de.openjobs.steps.StackSteps;
 
 @RunWith(JUnitReportingRunner.class)
-public class OpenJobsScenarios extends JUnitStories {
+public class RunScenarios extends JUnitStories {
 
 	private Configuration configuration;
 
-	public OpenJobsScenarios() {
+	public RunScenarios() {
 		super();
 
 		configuration = new Configuration() {
