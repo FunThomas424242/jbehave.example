@@ -48,7 +48,6 @@
 			<plugin>
 				<groupId>org.jbehave</groupId>
 				<artifactId>jbehave-maven-plugin</artifactId>
-				<version>${jbehave.version}</version>
 				<executions>
 					<execution>
 						<id>run-stories-as-embeddables</id>
@@ -63,6 +62,23 @@
 							<ignoreFailureInStories>true</ignoreFailureInStories>
 							<ignoreFailureInView>false</ignoreFailureInView>
 						</configuration>
+					</execution>
+					<execution>
+						<id>map-stories</id>
+						<phase>integration-test</phase>
+						<configuration>
+							<includes>
+								<include>**/stories/*.story</include>
+							</includes>
+							<metaFilters>
+								<metaFilter>+author *</metaFilter>
+								<metaFilter>theme *</metaFilter>
+								<metaFilter>-skip</metaFilter>
+							</metaFilters>
+						</configuration>
+						<goals>
+							<goal>map-stories-as-paths</goal>
+						</goals>
 					</execution>
 				</executions>
 				<dependencies>
@@ -137,6 +153,11 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-dependency-plugin</artifactId>
 					<version>2.4</version>
+				</plugin>
+				<plugin>
+					<groupId>org.jbehave</groupId>
+					<artifactId>jbehave-maven-plugin</artifactId>
+					<version>${jbehave.version}</version>
 				</plugin>
 				<!--This plugin's configuration is used to store Eclipse m2e settings 
 					only. It has no influence on the Maven build itself. -->

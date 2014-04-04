@@ -40,7 +40,7 @@ public class VermittlungsSteps {
 		return null;
 	}
 
-	@Given("ein Arbeitgeber")
+	@Given("ein Arbeitgebers")
 	public Arbeitgeber registriereArbeitgeber() {
 		// Fehleranfälliger Punkt hier wäre NatSpec besser !!!
 		arbeitgeber = new Arbeitgeber();
