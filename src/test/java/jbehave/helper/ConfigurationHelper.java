@@ -101,7 +101,7 @@ public class ConfigurationHelper {
                 // .withDefaultFormats()
                 // .withViewResources(viewResources)
 
-                .withFormats(Format.HTML, Format.TXT, Format.XML)
+                .withFormats(Format.STATS, Format.HTML, Format.TXT, Format.XML)
 
         // , Format.CONSOLE)
         // .withFailureTrace(true).withFailureTraceCompression(true)

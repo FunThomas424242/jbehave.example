@@ -79,6 +79,9 @@
             <plugin>
                 <groupId>org.jbehave</groupId>
                 <artifactId>jbehave-maven-plugin</artifactId>
+                <configuration>
+                    <scope>test</scope>
+                </configuration>
                 <executions>
                     <execution>
                         <id>run-stories-as-embeddables</id>
@@ -87,7 +90,6 @@
                             <goal>run-stories-as-embeddables</goal>
                         </goals>
                         <configuration>
-                            <scope>test</scope>
                             <includes>
                                 <include>**/*Scenarios.java</include>
                             </includes>
@@ -95,11 +97,24 @@
                             <ignoreFailureInView>false</ignoreFailureInView>
                         </configuration>
                     </execution>
-                    <!-- <execution> <id>map-stories</id> <phase>integration-test</phase> 
-                        <configuration> <includes> <include>**/stories/*.story</include> </includes> 
-                        <metaFilters> <metaFilter>+author *</metaFilter> <metaFilter>theme *</metaFilter> 
-                        <metaFilter>-skip</metaFilter> </metaFilters> </configuration> <goals> <goal>map-stories-as-paths</goal> 
-                        </goals> </execution> -->
+                    <execution>
+                        <id>map-stories</id>
+                        <phase>integration-test</phase>
+                        <configuration>
+                            <scope>test</scope>
+                            <includes>
+                               <include>**/*Map.java</include>
+                            </includes>
+                            <metaFilters>
+                                <metaFilter>+author *</metaFilter>
+                                <metaFilter>themes *</metaFilter>
+                                <metaFilter>-skip</metaFilter>
+                            </metaFilters>
+                        </configuration>
+                        <goals>
+                            <goal>map-stories-as-embeddables</goal>
+                        </goals>
+                    </execution>
                 </executions>
                 <!-- <dependencies> <dependency> <groupId>log4j</groupId> 
                     <artifactId>log4j</artifactId> <version>1.2.16</version> </dependency> </dependencies> -->

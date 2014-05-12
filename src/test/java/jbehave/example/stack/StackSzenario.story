@@ -1,12 +1,18 @@
+Meta:
+@author FunThomas424242
+
 Erzählung:
 Um in einem Java Programm einen Stapel von Dingen abarbeiten zu können
 Als Entwickler
 Möchte ich Schnittstellen und Implementierungen aus Java direkt nutzen
 Damit ich nicht immer eine eigene Stackverwaltung bauen muss.
+
  
  
 Szenario:  Grundlegende Stack Funktionen
- 
+Meta:
+@themes UI Usability
+
 Gegeben sei ein leerer Stack.
 Wenn das Wort Java hinzugefügt wird
 Und das Wort C++ hinzugefügt wird
