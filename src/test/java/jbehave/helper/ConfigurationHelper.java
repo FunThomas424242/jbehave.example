@@ -93,7 +93,7 @@ public class ConfigurationHelper {
     }
 
     private StoryReporterBuilder getReportBuilder() {
-        return new StoryReporterBuilder()
+        return new StoryReporterBuilder().withRelativeDirectory("site/jbehave")
         // .withCodeLocation(
         // CodeLocations
         // .codeLocationFromClass(embeddableClass))

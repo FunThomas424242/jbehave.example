@@ -23,19 +23,22 @@
         <url>https://github.com/FunThomas424242/jbehave.example</url>
     </scm>
 
-    <contributors>
-        <contributor>
+    <developers>
+        <developer>
             <roles>
                 <role>project-owner</role>
                 <role>developer</role>
             </roles>
             <email>funthomas424242@gmail.com</email>
             <name>FunThomas424242</name>
-        </contributor>
-    </contributors>
+        </developer>
+    </developers>
+
     <licenses>
         <license>
-            <url>./LICENSE.txt</url>
+            <name>GNU LESSER GENERAL PUBLIC LICENSE v3.0</name>
+            <distribution>repo</distribution>
+            <url>http://www.gnu.org/licenses/lgpl-3.0.html</url>
         </license>
     </licenses>
 
@@ -103,7 +106,7 @@
                         <configuration>
                             <scope>test</scope>
                             <includes>
-                               <include>**/*Map.java</include>
+                                <include>**/*Map.java</include>
                             </includes>
                             <metaFilters>
                                 <metaFilter>+author *</metaFilter>
@@ -140,7 +143,7 @@
                                     <version>${jbehave.site.version}</version>
                                     <type>zip</type>
                                     <outputDirectory>
-                                        ${project.build.directory}/jbehave/view</outputDirectory>
+                                        ${project.build.directory}/site/jbehave/view</outputDirectory>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
@@ -159,7 +162,7 @@
                                     <groupId>org.jbehave</groupId>
                                     <artifactId>jbehave-core</artifactId>
                                     <version>${jbehave.version}</version>
-                                    <outputDirectory>${project.build.directory}/jbehave/view</outputDirectory>
+                                    <outputDirectory>${project.build.directory}/site/jbehave/view</outputDirectory>
                                     <includes>**\/*.css,**\/*.ftl,**\/*.js</includes>
                                 </artifactItem>
                             </artifactItems>
@@ -167,7 +170,33 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.doxia</groupId>
+                        <artifactId>doxia-module-markdown</artifactId>
+                        <version>1.5</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <generateSitemap>true</generateSitemap>
+                    <locales>de</locales>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>sitegen</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
+
+
 
 
 
@@ -194,6 +223,11 @@
                     <groupId>org.jbehave</groupId>
                     <artifactId>jbehave-maven-plugin</artifactId>
                     <version>${jbehave.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.3</version>
                 </plugin>
                 <!--This plugin's configuration is used to store Eclipse 
                     m2e settings only. It has no influence on the Maven build itself. -->
@@ -239,4 +273,71 @@
         </pluginManagement>
 
     </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.7</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>dependencies</report>
+                            <report>project-team</report>
+                            <report>mailing-list</report>
+                            <report>cim</report>
+                            <report>issue-tracking</report>
+                            <report>license</report>
+                            <report>scm</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>2.3</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>2.10</version>
+                <configuration>
+                    <xrefLocation>${project.reporting.outputDirectory}/../xref-test</xrefLocation>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>emma-maven-plugin</artifactId>
+                <version>1.0-alpha-3</version>
+                <inherited>true</inherited>
+            </plugin>
+            <!-- Generate "CheckStyle" report: about violations of coding 
+                standards -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.2</version>
+                <inherited>true</inherited>
+                <configuration>
+                    <enableRulesSummary>false</enableRulesSummary>
+                    <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+                </configuration>
+            </plugin>
+            <!-- Generate "JDepend" report -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jdepend-maven-plugin</artifactId>
+                <version>2.0-beta-2</version>
+                <inherited>true</inherited>
+            </plugin>
+            <!-- Generate "PMD" report -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.0.1</version>
+            </plugin>
+        </plugins>
+    </reporting>
 </project>
