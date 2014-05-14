@@ -16,6 +16,11 @@
         <url>https://github.com/FunThomas424242/jbehave.example/issues</url>
     </issueManagement>
 
+    <ciManagement>
+        <system>travis-ci</system>
+        <url>https://travis-ci.org/FunThomas424242/natspec-swingapp.example</url>
+    </ciManagement>
+
     <scm>
         <connection>scm:git:https://github.com/FunThomas424242/jbehave.example.git</connection>
         <developerConnection>scm:git:https://github.com/FunThomas424242/jbehave.example.git</developerConnection>

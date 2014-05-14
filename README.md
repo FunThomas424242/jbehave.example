@@ -1,4 +1,8 @@
 jbehave.example
 ===============
 
-Beispiel für ein Projekt welches über jbehave Akzeptanztests erstellt wurde.
+Beispielprojekt für Akzeptanztests mit JBehave.
+
+Projektstatus
+-----------------------
+[![Build Status](https://travis-ci.org/FunThomas424242/jbehave.example.png?branch=master)](https://travis-ci.org/FunThomas424242/jbehave.example)
