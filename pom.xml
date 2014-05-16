@@ -24,7 +24,6 @@
     <scm>
         <connection>scm:git:https://github.com/FunThomas424242/jbehave.example.git</connection>
         <developerConnection>scm:git:https://github.com/FunThomas424242/jbehave.example.git</developerConnection>
-        <tag>master</tag>
         <url>https://github.com/FunThomas424242/jbehave.example</url>
     </scm>
 
