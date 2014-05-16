@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <url>https://github.com/FunThomas424242/jbehave.example</url>
+    <url>http://funthomas424242.github.io/jbehave.example/index.html</url>
 
     <issueManagement>
         <system>trac</system>
@@ -48,10 +48,36 @@
     </licenses>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <jbehave.version>4.0-beta-7</jbehave.version>
         <jbehave.site.version>3.2</jbehave.site.version>
         <junit.version>4.11</junit.version>
+        <github.maventools.version>0.9</github.maventools.version>
     </properties>
+
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <github.global.server>github</github.global.server>
+                <testrun>true</testrun>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>remote</id>
+            <properties>
+                <github.global.userName>${env.USER}</github.global.userName>
+                <github.global.password>${env.PASSWORD}</github.global.password>
+                <testrun>false</testrun>
+            </properties>
+        </profile>
+    </profiles>
+
+
 
     <dependencies>
         <dependency>
@@ -84,6 +110,25 @@
 
 
         <plugins>
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>${github.maventools.version}</version>
+                <configuration>
+                    <message>Building site for ${project.version}</message>
+                    <dryRun>${testrun}</dryRun>
+                    <noJekyll>true</noJekyll>
+                    <merge>true</merge>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>install</phase>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.jbehave</groupId>
                 <artifactId>jbehave-maven-plugin</artifactId>
