@@ -4,6 +4,10 @@
     xsi:schemaLocation="http://maven.apache.org/DECORATION/1.3.0 http://maven.apache.org/xsd/decoration-1.3.0.xsd">
 
     <body>
+        <links>
+            <item name="GitHub" href="http://www.github.com" />
+            <item name="jBehave.Example" href="https://github.com/FunThomas424242/jbehave.example" />
+        </links>
         <menu name="Allgemeines">
             <item name="Willkommen bei" href="index.html" />
             <item name="JBehave Reports" href="jbehave/view/index.html" />
