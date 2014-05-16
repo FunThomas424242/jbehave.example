@@ -1,0 +1,26 @@
+
+(jbehave/example/stack/StackSzenario.story)
+Meta:
+@author FunThomas424242
+
+Narrative:
+In order to in einem Java Programm einen Stapel von Dingen abarbeiten zu können
+As a Entwickler
+I want to Schnittstellen und Implementierungen aus Java direkt nutzen
+Damit ich nicht immer eine eigene Stackverwaltung bauen muss.
+Scenario: Grundlegende Stack Funktionen
+Gegeben sei ein leerer Stack.
+Wenn das Wort Java hinzugefügt wird
+Und das Wort C++ hinzugefügt wird
+Wenn das oberste Element vom Stack entfernt wird
+Dann liegt das Wort Java ganz oben auf dem Stack.
+
+Scenario: Stack Suche
+Gegeben sei ein leerer Stack.
+Wenn das Wort Java hinzugefügt wird
+Und das Wort C++ hinzugefügt wird
+Wenn das Wort PHP hinzugefügt wird
+Und das Wort Java gesucht wird
+Dann ist die erwartete Position 3.
+
+

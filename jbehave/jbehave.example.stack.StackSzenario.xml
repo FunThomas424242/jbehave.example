@@ -1,0 +1,26 @@
+<story path="jbehave/example/stack/StackSzenario.story" title="">
+<meta>
+<property keyword="@" name="author" value="FunThomas424242"/>
+</meta>
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="In order to">in einem Java Programm einen Stapel von Dingen abarbeiten zu k&#246;nnen</inOrderTo>
+  <asA keyword="As a">Entwickler</asA>
+  <iWantTo keyword="I want to">Schnittstellen und Implementierungen aus Java direkt nutzen
+Damit ich nicht immer eine eigene Stackverwaltung bauen muss.</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="Grundlegende Stack Funktionen">
+<step outcome="successful">Gegeben sei ein leerer Stack.</step>
+<step outcome="successful">Wenn das Wort <parameter>Java</parameter> hinzugef&#252;gt wird</step>
+<step outcome="successful">Und das Wort <parameter>C++</parameter> hinzugef&#252;gt wird</step>
+<step outcome="successful">Wenn das oberste Element vom Stack entfernt wird</step>
+<step outcome="successful">Dann liegt das Wort <parameter>Java</parameter> ganz oben auf dem Stack.</step>
+</scenario>
+<scenario keyword="Scenario:" title="Stack Suche">
+<step outcome="successful">Gegeben sei ein leerer Stack.</step>
+<step outcome="successful">Wenn das Wort <parameter>Java</parameter> hinzugef&#252;gt wird</step>
+<step outcome="successful">Und das Wort <parameter>C++</parameter> hinzugef&#252;gt wird</step>
+<step outcome="successful">Wenn das Wort <parameter>PHP</parameter> hinzugef&#252;gt wird</step>
+<step outcome="successful">Und das Wort <parameter>Java</parameter> gesucht wird</step>
+<step outcome="successful">Dann ist die erwartete Position 3.</step>
+</scenario>
+</story>

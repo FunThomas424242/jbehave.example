@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rss version="0.91">
+  <channel>
+    <title>JBehave Example - Checkstyle report</title>
+    <link>http://funthomas424242.github.io/jbehave.example/index.html</link>
+    <description>JBehave Example - Checkstyle report</description>
+    <language>en-us</language>
+    <copyright>&#169;2014</copyright>
+    <item>
+      <title>File: 8,
+             Errors: 64,
+             Warnings: 0,
+             Infos: 0
+      </title>
+            <link>http://funthomas424242.github.io/jbehave.example/index.html/checkstyle.html</link>
+      <description>
+        <p>Click <a href="http://funthomas424242.github.io/jbehave.example/index.html/checkstyle.html">here</a> for the full Checkstyle report.</p>
+
+        <table summary="Files" boder="1">
+          <thead>
+            <tr>
+              <th>Files</th>
+              <th style="width:30px;"><abbr title="Info">I</abbr></th>
+              <th style="width:30px;"><abbr title="Warning">W</abbr></th>
+              <th style="width:30px;"><abbr title="Error">E</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                <td>
+                  <a href="http://funthomas424242.github.io/jbehave.example/index.html/checkstyle.html#de.openjobs.entities.Stellengesuch.java">de/openjobs/entities/Stellengesuch.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://funthomas424242.github.io/jbehave.example/index.html/checkstyle.html#de.openjobs.entities.Arbeitsuchender.java">de/openjobs/entities/Arbeitsuchender.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://funthomas424242.github.io/jbehave.example/index.html/checkstyle.html#de.openjobs.entities.Bewerbung.java">de/openjobs/entities/Bewerbung.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  23
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://funthomas424242.github.io/jbehave.example/index.html/checkstyle.html#de.openjobs.entities.package.html">de/openjobs/entities/package.html</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://funthomas424242.github.io/jbehave.example/index.html/checkstyle.html#de.openjobs.entities.Arbeitssuchender.java">de/openjobs/entities/Arbeitssuchender.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  7
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://funthomas424242.github.io/jbehave.example/index.html/checkstyle.html#de.openjobs.entities.Arbeitgeber.java">de/openjobs/entities/Arbeitgeber.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  8
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://funthomas424242.github.io/jbehave.example/index.html/checkstyle.html#de.openjobs.entities.Stellenangebot.java">de/openjobs/entities/Stellenangebot.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  22
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://funthomas424242.github.io/jbehave.example/index.html/checkstyle.html#de.openjobs.entities.package-info.java">de/openjobs/entities/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                      </tbody>
+        </table>
+        
+      </description>
+    </item>
+  </channel>
+</rss>
+
