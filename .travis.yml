@@ -4,6 +4,9 @@ env:
     - secure: "TtECYR8DLf+ymMuadMtRsCbSF66rmWS/y+DquaqZXrs126YTAP6kxWff5+yItyoGJ0/tAYW4LvYAGbY8xdRAJTXDUia3JZ5Q9OrME8d4zJKu1zXFzjRILGTYHAnf1vzJp5wDfV8G6aSzxDjltj3W3z1gX6KOpwM30Gf780sec6M="
 
 language: java
+
 jdk:
-  - openjdk7
-script: mvn -Premote clean install
+    - openjdk7
+  
+script:
+    - mvn -Premote clean install
