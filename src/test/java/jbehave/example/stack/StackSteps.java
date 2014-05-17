@@ -35,11 +35,11 @@ public class StackSteps extends Steps {
 
     @Then("liegt das Wort $word ganz oben auf dem Stack.")
     public void theResultingElementShouldBe(final String word) {
-        Assert.assertEquals(this.stackUnderTest.search(word), 1);
+        Assert.assertEquals(1, this.stackUnderTest.search(word));
     }
 
     @Then("ist die erwartete Position $pos.")
     public void thePositionReturnedShouldBe(final int pos) {
-        Assert.assertEquals(this.stackUnderTest.search(this.searchElement), pos);
+        Assert.assertEquals(pos, this.stackUnderTest.search(this.searchElement));
     }
 }
