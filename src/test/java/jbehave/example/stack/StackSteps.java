@@ -2,6 +2,7 @@ package jbehave.example.stack;
 
 import java.util.Stack;
 
+import org.jbehave.core.annotations.Alias;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
@@ -18,7 +19,12 @@ public class StackSteps extends Steps {
         this.stackUnderTest = new Stack<String>();
     }
 
-    @When("das Wort $element hinzugefügt wird")
+    @When("keine Operation auf dem Stack ausgeführt wird")
+    public void noOperation() {
+
+    }
+
+    @When("das Element $element hinzugefügt wird")
     public void anElementIsAdded(final String element) {
         this.stackUnderTest.push(element);
     }
@@ -28,12 +34,18 @@ public class StackSteps extends Steps {
         this.stackUnderTest.pop();
     }
 
-    @When("das Wort $element gesucht wird")
+    @When("das Element $element gesucht wird")
     public void searchForElement(final String element) {
         this.searchElement = element;
     }
 
-    @Then("liegt das Wort $word ganz oben auf dem Stack.")
+    @Then("enthält der Stack $count Elemente.")
+    @Alias("enthält der Stack $count Element.")
+    public void isEmptyStack(final int count) {
+        Assert.assertEquals(count, this.stackUnderTest.size());
+    }
+
+    @Then("liegt das Element $word ganz oben auf dem Stack.")
     public void theResultingElementShouldBe(final String word) {
         Assert.assertEquals(1, this.stackUnderTest.search(word));
     }
