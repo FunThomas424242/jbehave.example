@@ -12,20 +12,42 @@
 Damit ich keine eigene Stackverwaltung bauen muss.</div>
 </div>
 <div class="scenario">
+<h2>Scenario: Leerer Stack</h2>
+<div class="step successful">Gegeben sei ein leerer Stack.</div>
+<div class="step successful">Wenn keine Operation auf dem Stack ausgef&uuml;hrt wird</div>
+<div class="step successful">Dann enth&auml;lt der Stack <span class="step parameter">0</span> Elemente.</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Ein Elementiger Stack</h2>
+<div class="step successful">Gegeben sei ein leerer Stack.</div>
+<div class="step successful">Wenn das Element <span class="step parameter">0</span> hinzugef&uuml;gt wird</div>
+<div class="step successful">Dann enth&auml;lt der Stack <span class="step parameter">1</span> Element.</div>
+</div>
+<div class="scenario">
 <h2>Scenario: Grundlegende Stack Funktionen</h2>
 <div class="step successful">Gegeben sei ein leerer Stack.</div>
-<div class="step successful">Wenn das Wort <span class="step parameter">Java</span> hinzugef&uuml;gt wird</div>
-<div class="step successful">Und das Wort <span class="step parameter">C++</span> hinzugef&uuml;gt wird</div>
+<div class="step successful">Wenn das Element <span class="step parameter">Java</span> hinzugef&uuml;gt wird</div>
+<div class="step successful">Und das Element <span class="step parameter">7</span> hinzugef&uuml;gt wird</div>
 <div class="step successful">Wenn das oberste Element vom Stack entfernt wird</div>
-<div class="step successful">Dann liegt das Wort <span class="step parameter">Java</span> ganz oben auf dem Stack.</div>
+<div class="step successful">Dann liegt das Element <span class="step parameter">Java</span> ganz oben auf dem Stack.</div>
 </div>
 <div class="scenario">
 <h2>Scenario: Stack Suche</h2>
 <div class="step successful">Gegeben sei ein leerer Stack.</div>
-<div class="step successful">Wenn das Wort <span class="step parameter">Java</span> hinzugef&uuml;gt wird</div>
-<div class="step successful">Und das Wort <span class="step parameter">C++</span> hinzugef&uuml;gt wird</div>
-<div class="step successful">Wenn das Wort <span class="step parameter">PHP</span> hinzugef&uuml;gt wird</div>
-<div class="step successful">Und das Wort <span class="step parameter">Java</span> gesucht wird</div>
+<div class="step successful">Wenn das Element <span class="step parameter">Java</span> hinzugef&uuml;gt wird</div>
+<div class="step successful">Und das Element <span class="step parameter">C++</span> hinzugef&uuml;gt wird</div>
+<div class="step successful">Wenn das Element <span class="step parameter">PHP</span> hinzugef&uuml;gt wird</div>
+<div class="step successful">Und das Element <span class="step parameter">Java</span> gesucht wird</div>
 <div class="step successful">Dann ist die erwartete Position 3.</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Stack Suche doppelter Eintrag</h2>
+<div class="step successful">Gegeben sei ein leerer Stack.</div>
+<div class="step successful">Wenn das Element <span class="step parameter">Java</span> hinzugef&uuml;gt wird</div>
+<div class="step successful">Und das Element <span class="step parameter">C++</span> hinzugef&uuml;gt wird</div>
+<div class="step successful">Wenn das Element <span class="step parameter">Java</span> hinzugef&uuml;gt wird</div>
+<div class="step successful">Und das Element <span class="step parameter">PHP</span> hinzugef&uuml;gt wird</div>
+<div class="step successful">Wenn das Element <span class="step parameter">Java</span> gesucht wird</div>
+<div class="step successful">Dann ist die erwartete Position 2.</div>
 </div>
 </div>

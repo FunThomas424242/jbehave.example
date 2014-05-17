@@ -8,19 +8,38 @@
   <iWantTo keyword="I want to">Schnittstellen und Implementierungen aus Java direkt nutzen
 Damit ich keine eigene Stackverwaltung bauen muss.</iWantTo>
 </narrative>
+<scenario keyword="Scenario:" title="Leerer Stack">
+<step outcome="successful">Gegeben sei ein leerer Stack.</step>
+<step outcome="successful">Wenn keine Operation auf dem Stack ausgef&#252;hrt wird</step>
+<step outcome="successful">Dann enth&#228;lt der Stack <parameter>0</parameter> Elemente.</step>
+</scenario>
+<scenario keyword="Scenario:" title="Ein Elementiger Stack">
+<step outcome="successful">Gegeben sei ein leerer Stack.</step>
+<step outcome="successful">Wenn das Element <parameter>0</parameter> hinzugef&#252;gt wird</step>
+<step outcome="successful">Dann enth&#228;lt der Stack <parameter>1</parameter> Element.</step>
+</scenario>
 <scenario keyword="Scenario:" title="Grundlegende Stack Funktionen">
 <step outcome="successful">Gegeben sei ein leerer Stack.</step>
-<step outcome="successful">Wenn das Wort <parameter>Java</parameter> hinzugef&#252;gt wird</step>
-<step outcome="successful">Und das Wort <parameter>C++</parameter> hinzugef&#252;gt wird</step>
+<step outcome="successful">Wenn das Element <parameter>Java</parameter> hinzugef&#252;gt wird</step>
+<step outcome="successful">Und das Element <parameter>7</parameter> hinzugef&#252;gt wird</step>
 <step outcome="successful">Wenn das oberste Element vom Stack entfernt wird</step>
-<step outcome="successful">Dann liegt das Wort <parameter>Java</parameter> ganz oben auf dem Stack.</step>
+<step outcome="successful">Dann liegt das Element <parameter>Java</parameter> ganz oben auf dem Stack.</step>
 </scenario>
 <scenario keyword="Scenario:" title="Stack Suche">
 <step outcome="successful">Gegeben sei ein leerer Stack.</step>
-<step outcome="successful">Wenn das Wort <parameter>Java</parameter> hinzugef&#252;gt wird</step>
-<step outcome="successful">Und das Wort <parameter>C++</parameter> hinzugef&#252;gt wird</step>
-<step outcome="successful">Wenn das Wort <parameter>PHP</parameter> hinzugef&#252;gt wird</step>
-<step outcome="successful">Und das Wort <parameter>Java</parameter> gesucht wird</step>
+<step outcome="successful">Wenn das Element <parameter>Java</parameter> hinzugef&#252;gt wird</step>
+<step outcome="successful">Und das Element <parameter>C++</parameter> hinzugef&#252;gt wird</step>
+<step outcome="successful">Wenn das Element <parameter>PHP</parameter> hinzugef&#252;gt wird</step>
+<step outcome="successful">Und das Element <parameter>Java</parameter> gesucht wird</step>
 <step outcome="successful">Dann ist die erwartete Position 3.</step>
+</scenario>
+<scenario keyword="Scenario:" title="Stack Suche doppelter Eintrag">
+<step outcome="successful">Gegeben sei ein leerer Stack.</step>
+<step outcome="successful">Wenn das Element <parameter>Java</parameter> hinzugef&#252;gt wird</step>
+<step outcome="successful">Und das Element <parameter>C++</parameter> hinzugef&#252;gt wird</step>
+<step outcome="successful">Wenn das Element <parameter>Java</parameter> hinzugef&#252;gt wird</step>
+<step outcome="successful">Und das Element <parameter>PHP</parameter> hinzugef&#252;gt wird</step>
+<step outcome="successful">Wenn das Element <parameter>Java</parameter> gesucht wird</step>
+<step outcome="successful">Dann ist die erwartete Position 2.</step>
 </scenario>
 </story>
